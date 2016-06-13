@@ -1,0 +1,72 @@
+<html><head><style id="_defaultStyles">
+		:root {
+			--background-color: rgb(30, 30, 30);
+			--color: rgb(204, 204, 204);
+			--font-family: 'Segoe WPC', 'Segoe UI', SFUIText-Light, HelveticaNeue-Light, sans-serif;
+			--font-size: 13px;
+		}
+		body {
+			margin: 0;
+			background-color: var(--background-color);
+			color: var(--color);
+			font-family: var(--font-family);
+			font-size: var(--font-size);
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		a:focus,
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 1px solid -webkit-focus-ring-color;
+			outline-offset: -1px;
+		}
+		::-webkit-scrollbar {
+			width: 14px;
+			height: 10px;
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background-color: rgba(100, 100, 100, 0.7);
+		}
+			::-webkit-scrollbar-thumb {
+				background-color: rgba(121, 121, 121, 0.4);
+			}
+			::-webkit-scrollbar-thumb:active {
+				background-color: rgba(85, 85, 85, 0.8);
+			}</style><link rel="stylesheet" href="katex.min.css"><base href="file:///home/breeden/tex/grad/grushin/"></head><body><h1>Notes</h1>
+<h2>Off Diagonal Estimates</h2>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.16667em"></mspace><mi>d</mi><mi>x</mi><mo>=</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\int_0^1 f(x)\,dx = \cos(x) + \sin(x) 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.4251079999999998em;"></span><span class="strut bottom" style="height:2.337358em;vertical-align:-0.91225em;"></span><span class="base displaystyle textstyle uncramped"><span class="mop"><span class="op-symbol large-op mop" style="margin-right:0.44445em;top:-0.0011249999999999316em;">∫</span><span class="vlist"><span style="top:0.91225em;margin-left:-0.44445em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.9739999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mord mspace thinspace"></span><span class="mord mathit">d</span><span class="mord mathit">x</span><span class="mrel">=</span><span class="mop">cos</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">+</span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></span></p>
+<p>Recall: <code>K = D - x^3 = e(p)De(-p)</code><br>
+Recall: <code>K' = D + x^3 = e(-p)De(p)</code></p>
+<h3>Context</h3>
+<ul>
+<li>Set <code>|x - y| &gt;= p(y)</code></li>
+<li>Set <code>B_1 = B(y, |x - y|/4)</code> and <code>B_2 = B(x, |x - y|/4)</code></li>
+<li>Let <code>f</code> have support in <code>B_1</code> (near y).</li>
+<li>Set <code>u = (K'K)^{-1} f</code></li>
+<li><strong>GOAL:</strong> Show <code>|u(x)| &lt;= C(r,y) ||f||</code> for <code>x in B_1</code>.</li>
+</ul>
+<h3>TODO</h3>
+<ul>
+<li>Show <code>|phi(x)| &lt;= Cu(B(y,4p(y)) ~ 1</code> for <code>x in B(y,4p(y))</code>.</li>
+</ul>
+<ol>
+<li>Get pointwise estimates on <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ν</mi><mi>D</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">\nu Du</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.06366em;">ν</span><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="mord mathit">u</span></span></span></span> bounded above by \nm{f}.</li>
+<li>Make use of the fact that <code>Ku = exp(phi)D{exp(-phi)u}</code></li>
+<li></li>
+</ol>
+<script>
+				document.body.addEventListener('click', function(event) {
+					let node = event.target;
+					while (node) {
+						if (node.tagName === 'A' && node.href && node.href[0] !== '#') {
+							window.parent.postMessage({ command: 'did-click-link', data: node.href }, 'file://');
+							event.preventDefault();
+							break;
+						}
+						node = node.parentNode;
+					}
+				});</script></body></html>
