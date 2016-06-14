@@ -1,24 +1,24 @@
 {
-  "name": "vscode-css-properties",
-  "displayName": "Preview CSS Properties Sample",
-  "description": "A sample illustrating the use of TextContentProviders and the `vscode.previewHtml` command, introduce in 0.10.7",
-  "version": "0.0.10",
-  "publisher": "eg2",
+  "name": "vscode-markdown-it",
+  "displayName": "Markdown-it",
+  "description": "Markdown-it integration with live preview, and KaTeX support",
+  "version": "0.1.0",
+  "publisher": "cbreeden",
   "galleryBanner": {
-    "color": "#5c2d91",
+    "color": "#329894",
     "theme": "dark"
   },
   "bugs": {
-    "url": "https://github.com/Microsoft/vscode-extension-samples/issues",
-    "email": "egamma@microsoft.com"
+    "url": "https://github.com/cbreeden/vscode-markdownit/issues",
+    "email": "github@breeden.cc"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/vscode-extension-samples.git"
+    "url": "https://github.com/cbreeden/vscode-markdownit.git"
   },
-  "homepage": "https://github.com/Microsoft/vscode-extension-samples/tree/master/textdocumentprovider-sample/README.md",
+  "homepage": "https://github.com/cbreeden/vscode-markdownit",
   "categories": [
-    "Other"
+    "Languages"
   ],
   "engines": {
     "vscode": "^0.10.7"
@@ -31,7 +31,7 @@
     "commands": [
       {
         "command": "extension.markdownitPreview",
-        "title": "Markdown-it Preview"
+        "title": "Markdown-it: Preview"
       }
     ]
   },
